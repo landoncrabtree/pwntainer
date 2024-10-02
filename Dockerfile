@@ -12,5 +12,7 @@ RUN git clone https://github.com/pwndbg/pwndbg /tools/pwndbg && cd /tools/pwndbg
 # binja only
 # RUN cd /tools && wget https://github.com/Vector35/debugger/releases/download/0.1/debugger-linux.zip && unzip debugger-linux.zip -d debugger && rm -rf debugger-linu*.zip
 
+RUN wget https://gist.githubusercontent.com/kubaceg/a66f13d75392e3d9e59b/raw/de9b1d2ce184ac363d1276864a36d213c0f955bf/.bashrc -O /root/.bashrc
+
 WORKDIR /pwn
 EXPOSE 31337

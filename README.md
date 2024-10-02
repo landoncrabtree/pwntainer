@@ -21,7 +21,7 @@ colima start -p x64 -a x86_64 -c 8 -m 4 -d 10 --vm-type qemu --profile pwn
 
 # Build and run the container
 docker build -t pwn:pwn .
-docker run --security-opt seccomp=unconfined --privileged --cap-add=SYS_PTRACE -p 31337:31337 -v ./:/pwn -it pwn:pwn bash
+docker run --security-opt seccomp=unconfined --privileged --cap-add=SYS_PTRACE -p 31337:31337 -v ./shared:/pwn -it pwn:pwn bash
 
 # If you want to switch back to Docker Desktop
 # docker context use default
