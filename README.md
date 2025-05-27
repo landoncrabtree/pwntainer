@@ -15,6 +15,7 @@ A Docker container for binary exploitation and dynamic reverse engineering. Desi
 # Install Docker Desktop and Colima
 brew install --cask docker
 brew install colima
+brew install lima-additional-guestagents
 
 # Create a new Docker context for Colima
 colima start -p x64 -a x86_64 -c 8 -m 4 -d 10 --vm-type qemu --profile pwn
