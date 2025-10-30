@@ -3,7 +3,7 @@ FROM ubuntu:latest
 RUN apt update -y && \
     apt install -y build-essential jq strace ltrace curl wget rubygems gcc dnsutils netcat-traditional \
     nano vim gdb python3-full python3-pip python3-dev file libssl-dev libffi-dev wget git make procps \
-    libpcre3-dev libdb-dev libxt-dev libxaw7-dev tmux
+    libpcre3-dev libdb-dev libxt-dev libxaw7-dev tmux binutils
 
 RUN pip3 install --break-system-packages capstone requests pwntools r2pipe unicorn ropper meson ROPgadget
 RUN git clone https://github.com/niklasb/libc-database /tools/libc-database
